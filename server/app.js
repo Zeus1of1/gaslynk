@@ -21,9 +21,9 @@ app.use(express.static(path.join(__dirname, '../dist/public')));
 const server = await registerRoutes(app);
 
 // Catch-all route to serve the frontend
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../dist/public/index.html'));
-});
+// app.get('*', (req, res) => {
+//   res.sendFile(path.join(__dirname, '../dist/public/index.html'));
+// });
 
 // Error handling middleware
 app.use((err, req, res, next) => {
